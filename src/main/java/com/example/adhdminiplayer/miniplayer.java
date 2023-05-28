@@ -3,13 +3,17 @@ package com.example.adhdminiplayer;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-public class miniplayer extends Application {
+
+import java.security.MessageDigest;
+
+public class MiniPlayer extends Application {
 
     private double xOffset = 0;
     private double yOffset = 0;
@@ -21,6 +25,8 @@ public class miniplayer extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         stage.initStyle(StageStyle.UNDECORATED);
+        stage.setOpacity(0.8);
+
 
         Group root = new Group();
         Scene scene = new Scene(root, Color.ORANGE);
@@ -35,6 +41,8 @@ public class miniplayer extends Application {
         stage.setHeight(210);
         stage.setX(50);
         stage.setY(50);
+
+
 
         stage.setScene(scene);
         stage.show();
@@ -53,11 +61,11 @@ public class miniplayer extends Application {
 
     private void onMouseEntered(MouseEvent event) {
         Stage stage = (Stage) ((Scene) event.getSource()).getWindow();
-        stage.setOpacity(0.5);
+        stage.setOpacity(0.4);
     }
 
     private void onMouseExited(MouseEvent event) {
         Stage stage = (Stage) ((Scene) event.getSource()).getWindow();
-        stage.setOpacity(1.0);
+        stage.setOpacity(0.8);
     }
 }
