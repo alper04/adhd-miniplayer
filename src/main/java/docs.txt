@@ -1,0 +1,5 @@
+How to fix javafx.media sh!t import probelm:
+
+1. create new project with MAVEN. (dont use intellij javafx)
+2. import the jars.
+3. add this to vm options: --module-path "C:\Users\Alper\Documents\_Projects\Libraries\java_libs\javafx-sdk-20.0.1\lib" --add-modules javafx.controls,javafx.media,javafx.base
